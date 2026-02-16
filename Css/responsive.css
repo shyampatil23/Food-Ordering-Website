@@ -1,0 +1,120 @@
+@media (max-width: 1199px) and (min-width: 768px){
+
+    .item3{ order: 1; }   /* top nav + content block */
+  .item2{ order: 3; }   /* black image below nav */
+  .item4{ order: 2; }  
+  /* keep grid but make it flexible */
+  .container{
+    grid-template-columns: minmax(60px,70px) 1fr;
+    gap: 40px;
+  }
+
+  /* left vertical nav stays */
+  .item1{
+    display: block;
+  }
+
+  /* image + content stay in same column */
+  .item2,
+  .item3,
+  .item4{
+    grid-column: 2;
+  }
+
+  /* scale black image properly */
+ .item2{
+    display: flex;
+    justify-content: center;
+  }
+
+  .item2 img{
+    max-width: 50%;
+    height: auto;
+  }
+
+  /* text adapts */
+  .item3 .content{
+    height: auto;
+  }
+
+  .item3 .content .tx{
+    width: clamp(260px, 40vw, 340px);
+  }
+
+  /* cards wrap but stay inside */
+  .item4 .cards{
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+    gap: 25px;
+    justify-items: center;
+  }
+}
+@media (max-width: 767px){
+  .item3{ order: 1; }   /* top nav + content block */
+  .item2{ order: 3; }   /* black image below nav */
+  .item4{ order: 2; } 
+  /* single column flow */
+  .container{
+    grid-template-columns: minmax(60px,70px) 1fr;
+    gap: 30px;
+  }
+
+  /* left nav stays */
+  .item1{
+    display: block;
+  }
+
+  /* top navigation goes first */
+  .item3{
+    grid-column: 2;
+  }
+
+  .item3 .nav{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* black image below nav */
+  .item2{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .item2 img{
+    width: 260px;
+    height: auto;
+  }
+
+  /* healthy salad text below image */
+  .item3 .content{
+    height: auto;
+    justify-content: center;
+  }
+
+  .item3 .content .tx{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* food cards one by one */
+  .item4{
+    grid-column: 2;
+  }
+
+  .item4 .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .food-card{
+    width: 90%;
+    max-width: 320px;
+  }
+}
