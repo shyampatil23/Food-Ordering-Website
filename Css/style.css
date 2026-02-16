@@ -121,26 +121,26 @@
    grid-column: 2/ -1;
 
 }
-/* CARD CONTAINER */
+
 .item4 .cards{
   display: flex;
-  gap: 40px;                 /* more breathing space */
+  gap: 40px;                 
   align-items: flex-start;
 }
 
-/* CARD */
+
 .food-card{
-  width: 220px;              /* ✅ wider card */
-  min-height: 200px;         /* keeps proportions */
+  width: 220px;              
+  min-height: 200px;         
   background-color: #1e1e1e;
   color: white;
   border-radius: 26px;
-  padding: 60px 20px 20px;   /* top space for image */
+  padding: 60px 20px 20px;   
   text-align: center;
   position: relative;
 }
 
-/* IMAGE HOLDER */
+
 .food-img{
   width: 130px;
   height: 130px;
@@ -164,7 +164,7 @@
   object-fit: cover;
 }
 
-/* PRICE */
+
 .food-card h4{
   font-size: 18px;
   margin-bottom: 40px;
@@ -172,14 +172,14 @@
   
 }
 
-/* TITLE */
+
 .food-card .title{
   font-size: 15px;
   font-weight: 600;
   margin-left: 50px;
 }
 
-/* SUB TEXT */
+
 .food-card .sub{
   font-size: 13px;
   color: #aaa;
